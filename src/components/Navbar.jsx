@@ -4,12 +4,17 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Products", href: "#products" },
-    { name: "Brands", href: "#brands" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", id: "home" },
+    { name: "Products", id: "products" },
+    { name: "Brands", id: "brands" },
+    { name: "About", id: "about" },
+    { name: "Contact", id: "contact" },
   ];
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -17,21 +22,24 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Shop Name */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-xl font-bold text-gray-800">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-xl font-bold text-gray-800 cursor-pointer"
+            >
               Sri Hari <span className="text-red-600">Electricals</span>
-            </a>
+            </button>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                className="text-gray-700 hover:text-red-600 font-medium transition-colors"
+                onClick={() => scrollToSection(link.id)}
+                className="text-gray-700 hover:text-red-600 font-medium transition-colors cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
 
             <a
@@ -48,7 +56,7 @@ function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 focus:outline-none"
+              className="text-gray-700 focus:outline-none cursor-pointer"
             >
               <svg
                 className="w-7 h-7"
@@ -81,14 +89,16 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-t px-4 py-3 space-y-3">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-gray-700 hover:text-red-600 font-medium"
+              onClick={() => {
+                scrollToSection(link.id);
+                setIsOpen(false);
+              }}
+              className="block w-full text-left text-gray-700 hover:text-red-600 font-medium cursor-pointer"
             >
               {link.name}
-            </a>
+            </button>
           ))}
 
           <a

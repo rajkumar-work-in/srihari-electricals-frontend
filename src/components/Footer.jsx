@@ -1,4 +1,17 @@
 function Footer() {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const quickLinks = [
+    { name: "Home", id: "home" },
+    { name: "Products", id: "products" },
+    { name: "Brands", id: "brands" },
+    { name: "About", id: "about" },
+    { name: "Contact", id: "contact" },
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-300 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -20,11 +33,16 @@ function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-3">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="hover:text-red-500">Home</a></li>
-              <li><a href="#products" className="hover:text-red-500">Products</a></li>
-              <li><a href="#brands" className="hover:text-red-500">Brands</a></li>
-              <li><a href="#about" className="hover:text-red-500">About</a></li>
-              <li><a href="#contact" className="hover:text-red-500">Contact</a></li>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <button
+                    onClick={() => scrollToSection(link.id)}
+                    className="hover:text-red-500 cursor-pointer"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -34,7 +52,7 @@ function Footer() {
             <p className="text-sm">📞 8825486940</p>
             <p className="text-sm mt-1">✉️ ksanjai21203@gmail.com</p>
             <p className="text-sm mt-1">🕒 8:00 AM – 9:00 PM</p>
-            
+
             <a
               href="https://www.instagram.com/mr.__jacky__"
               target="_blank"
