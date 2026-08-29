@@ -1,20 +1,21 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", id: "home" },
-    { name: "Products", id: "products" },
-    { name: "Brands", id: "brands" },
-    { name: "About", id: "about" },
-    { name: "Contact", id: "contact" },
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: "Brands", path: "/brands" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  const linkClass = ({ isActive }) =>
+    `font-medium transition-colors cursor-pointer ${
+      isActive ? "text-red-600" : "text-gray-700 hover:text-red-600"
+    }`;
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -22,24 +23,20 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Shop Name */}
           <div className="flex-shrink-0">
-            <button
-              onClick={() => scrollToSection("home")}
+            <NavLink
+              to="/"
               className="text-xl font-bold text-gray-800 cursor-pointer"
             >
               Sri Hari <span className="text-red-600">Electricals</span>
-            </button>
+            </NavLink>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.id)}
-                className="text-gray-700 hover:text-red-600 font-medium transition-colors cursor-pointer"
-              >
+              <NavLink key={link.name} to={link.path} className={linkClass}>
                 {link.name}
-              </button>
+              </NavLink>
             ))}
 
             <a
@@ -89,16 +86,18 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-t px-4 py-3 space-y-3">
           {navLinks.map((link) => (
-            <button
+            <NavLink
               key={link.name}
-              onClick={() => {
-                scrollToSection(link.id);
-                setIsOpen(false);
-              }}
-              className="block w-full text-left text-gray-700 hover:text-red-600 font-medium cursor-pointer"
+              to={link.path}
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `block w-full text-left font-medium cursor-pointer ${
+                  isActive ? "text-red-600" : "text-gray-700 hover:text-red-600"
+                }`
+              }
             >
               {link.name}
-            </button>
+            </NavLink>
           ))}
 
           <a

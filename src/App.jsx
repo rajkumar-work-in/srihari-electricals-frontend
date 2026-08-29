@@ -1,5 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Brands from "./pages/Brands";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -7,13 +13,13 @@ function App() {
       <Navbar />
 
       <main className="flex-1">
-        {/* Home section placeholder — we'll build this Day 2 */}
-        <section id="home" className="py-20 text-center">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Sri Hari Electricals
-          </h1>
-          <p className="text-gray-500 mt-2">Homepage content coming Day 2</p>
-        </section>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/brands" element={<Brands />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
 
       <Footer />

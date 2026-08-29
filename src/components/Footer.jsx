@@ -1,17 +1,13 @@
-import { Phone, Mail, Clock, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Phone, Mail, Clock, Camera } from "lucide-react";
 
 function Footer() {
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   const quickLinks = [
-    { name: "Home", id: "home" },
-    { name: "Products", id: "products" },
-    { name: "Brands", id: "brands" },
-    { name: "About", id: "about" },
-    { name: "Contact", id: "contact" },
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: "Brands", path: "/brands" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -37,12 +33,9 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="hover:text-red-500 cursor-pointer"
-                  >
+                  <Link to={link.path} className="hover:text-red-500 cursor-pointer">
                     {link.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -73,7 +66,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm mt-2 hover:text-red-500 w-fit"
             >
-              <Instagram size={16} className="text-red-500" />
+              <Camera size={16} className="text-red-500" />
               <span>Follow us on Instagram</span>
             </a>
           </div>
