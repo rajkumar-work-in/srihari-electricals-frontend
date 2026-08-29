@@ -1,3 +1,5 @@
+import { Phone, Mail, Clock, Instagram } from "lucide-react";
+
 function Footer() {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -49,17 +51,30 @@ function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-white text-lg font-bold mb-3">Get in Touch</h3>
-            <p className="text-sm">📞 8825486940</p>
-            <p className="text-sm mt-1">✉️ ksanjai21203@gmail.com</p>
-            <p className="text-sm mt-1">🕒 8:00 AM – 9:00 PM</p>
+
+            <div className="flex items-center gap-2 text-sm mb-2">
+              <Phone size={16} className="text-red-500" />
+              <span>8825486940</span>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm mb-2">
+              <Mail size={16} className="text-red-500" />
+              <span>ksanjai21203@gmail.com</span>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm mb-2">
+              <Clock size={16} className="text-red-500" />
+              <span>8:00 AM – 9:00 PM</span>
+            </div>
 
             <a
               href="https://www.instagram.com/mr.__jacky__"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-2 text-sm hover:text-red-500"
+              className="flex items-center gap-2 text-sm mt-2 hover:text-red-500 w-fit"
             >
-              📷 Follow us on Instagram
+              <Instagram size={16} className="text-red-500" />
+              <span>Follow us on Instagram</span>
             </a>
           </div>
         </div>
