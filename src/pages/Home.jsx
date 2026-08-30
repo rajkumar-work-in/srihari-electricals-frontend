@@ -66,8 +66,8 @@ function Home() {
         />
 
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 md:pb-24 z-[1]">
-          <span className="inline-flex items-center gap-2 text-red-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-4">
-            <span className="w-8 h-px bg-red-400" />
+          <span className="inline-flex items-center gap-2 text-red-500 text-xs md:text-sm font-semibold tracking-widest uppercase mb-4">
+            <span className="w-8 h-px bg-red-500" />
             Since 2016 · Pudupet
           </span>
 
