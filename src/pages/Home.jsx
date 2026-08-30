@@ -19,7 +19,7 @@ function Home() {
   ];
 
   const trustPoints = [
-    { icon: Clock, title: "Since 2016", desc: "9+ years serving Puthupet" },
+    { icon: Clock, title: "Since 2016", desc: "9+ years serving Pudupet" },
     {
       icon: ShieldCheck,
       title: "Genuine Brands",
@@ -68,7 +68,7 @@ function Home() {
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 md:pb-24 z-[1]">
           <span className="inline-flex items-center gap-2 text-red-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-4">
             <span className="w-8 h-px bg-red-400" />
-            Since 2016 · Puthupet
+            Since 2016 · Pudupet
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.05] max-w-3xl mb-5">

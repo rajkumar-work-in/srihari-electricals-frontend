@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, Clock, Camera } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   const quickLinks = [
@@ -66,7 +67,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm mt-2 hover:text-red-500 w-fit"
             >
-              <Camera size={16} className="text-red-500" />
+              <FaInstagram size={16} className="text-red-500" />
               <span>Follow us on Instagram</span>
             </a>
           </div>

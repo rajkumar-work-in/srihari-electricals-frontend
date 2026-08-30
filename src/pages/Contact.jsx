@@ -1,4 +1,5 @@
-import { Phone, Mail, Clock, MapPin, MessageCircle, Camera } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, MessageCircle } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 
 function Contact() {
   const contactCards = [
@@ -21,7 +22,7 @@ function Contact() {
       href: "mailto:ksanjai21203@gmail.com",
     },
     {
-      icon: Camera,
+      icon: FaInstagram,
       title: "Instagram",
       value: "@mr.__jacky__",
       href: "https://www.instagram.com/mr.__jacky__",
@@ -31,14 +32,20 @@ function Contact() {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-900 to-red-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1567361808960-dec9cb578182?auto=format&fit=crop&w=1600&q=80"
+          alt="Hardware tools"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white">
             Get In Touch
           </h1>
           <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
-            Have a question or need something specific? We're just a message
-            away.
+            Have a question or need something specific? We're just a message away — our team is always 
+            ready to assist you.
           </p>
         </div>
       </section>
@@ -88,9 +95,7 @@ function Contact() {
 
               <div className="flex items-start gap-3 mb-8">
                 <Clock className="text-red-600 mt-1 flex-shrink-0" size={20} />
-                <p className="text-gray-600">
-                  Open daily, 8:00 AM – 9:00 PM
-                </p>
+                <p className="text-gray-600">Open daily, 8:00 AM – 9:00 PM</p>
               </div>
               <a
                 href="https://wa.me/918825486940"

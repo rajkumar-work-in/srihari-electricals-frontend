@@ -6,7 +6,7 @@ function About() {
     { icon: Clock, value: "9+", label: "Years in Business" },
     { icon: Users, value: "1000+", label: "Happy Customers" },
     { icon: ShieldCheck, value: "100%", label: "Genuine Products" },
-    { icon: MapPin, value: "1", label: "Trusted Location in Puthupet" },
+    { icon: MapPin, value: "1", label: "Trusted Location in Pudupet" },
   ];
 
   return (
