@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { ShieldCheck, Zap, Wrench, Clock, Phone } from "lucide-react";
+import BrandMarquee from "../components/BrandMarquee";
+import HeroSlider from "../components/HeroSlider";
 
-import heroImg from "../assets/images/hero-shop-front.jpg";
+import heroShopFront from "../assets/images/hero-shop-front-v3.jpg";
 import electricalsImg from "../assets/images/category-electricals.jpg";
 import plumbingImg from "../assets/images/category-plumbing.jpg";
 import lightsImg from "../assets/images/category-lights.jpg";
@@ -9,7 +11,11 @@ import wiresImg from "../assets/images/category-wires.jpg";
 
 function Home() {
   const categories = [
-    { name: "Electricals", img: electricalsImg, desc: "Switches, sockets & accessories" },
+    {
+      name: "Electricals",
+      img: electricalsImg,
+      desc: "Switches, sockets & accessories",
+    },
     { name: "Plumbing", img: plumbingImg, desc: "Pipes, taps & fittings" },
     { name: "Lights", img: lightsImg, desc: "LED bulbs & fixtures" },
     { name: "Wires & Cables", img: wiresImg, desc: "Hoses, wires & mesh" },
@@ -17,59 +23,118 @@ function Home() {
 
   const trustPoints = [
     { icon: Clock, title: "Since 2016", desc: "9+ years serving Panruti" },
-    { icon: ShieldCheck, title: "Genuine Brands", desc: "100% authentic products" },
+    {
+      icon: ShieldCheck,
+      title: "Genuine Brands",
+      desc: "100% authentic products",
+    },
     { icon: Zap, title: "Wide Range", desc: "Electricals to sanitary ware" },
-    { icon: Wrench, title: "Expert Advice", desc: "Right product for your need" },
+    {
+      icon: Wrench,
+      title: "Expert Advice",
+      desc: "Right product for your need",
+    },
   ];
 
   const brands = [
-    "Finolex", "Panasonic", "Havells", "Goldmedal",
-    "Philips", "Atomberg", "Anchor", "Crompton",
+    "Finolex",
+    "Panasonic",
+    "Havells",
+    "Goldmedal",
+    "Philips",
+    "Atomberg",
+    "Anchor",
+    "Crompton",
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative">
-        <div className="h-[420px] md:h-[520px] w-full overflow-hidden">
-          <img
-            src={heroImg}
-            alt="Sri Hari Electricals shop front"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+      <section className="relative h-[85vh] min-h-[520px] max-h-[720px] w-full overflow-hidden">
+        <HeroSlider
+          images={[
+            {
+              src: heroShopFront,
+              alt: "Sri Hari Electricals storefront signage",
+            },
+            {
+              src: "https://images.unsplash.com/photo-1519520104014-df63821cb6f9?auto=format&fit=crop&w=1600&q=80",
+              alt: "Variety of hardware products on display",
+            },
+            {
+              src: "https://images.unsplash.com/photo-1624927637280-f033784c1279?auto=format&fit=crop&w=1600&q=80",
+              alt: "Clean organized hardware shelving",
+            },
+          ]}
+        />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <span className="bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wide">
-            SINCE 2016
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 md:pb-24 z-[1]">
+          <span className="inline-flex items-center gap-2 text-red-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-4">
+            <span className="w-8 h-px bg-red-400" />
+            Since 2016 · Puthupet
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
-            Sri Hari Electricals
+
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.05] max-w-3xl mb-5">
+            Genuine Hardware.
+            <br />
+            Trusted Since Day One.
           </h1>
-          <p className="text-gray-200 text-base md:text-lg max-w-xl mb-8">
-            Your trusted hardware store for Electricals, Plumbing, Lights,
-            Sanitary Ware, Cables & Wires in Panruti
+
+          <p className="text-gray-300 text-base md:text-lg max-w-xl mb-8">
+            Electricals, plumbing, lighting, sanitary ware, cables & wires —
+            everything for your home or project, all under one roof.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="https://wa.me/918825486940"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-full font-medium transition-colors text-sm md:text-base"
             >
-              WhatsApp Us
+              Chat on WhatsApp
             </a>
-            
+
             <a
               href="tel:+918825486940"
-              className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-lg font-medium transition-colors"
+              className="flex items-center justify-center gap-2 border border-white/30 hover:border-white text-white px-7 py-3.5 rounded-full font-medium transition-colors text-sm md:text-base"
             >
-              <Phone size={18} />
+              <Phone size={16} />
               Call Now
             </a>
           </div>
         </div>
+      </section>
+
+      {/* Floating Quick Enquiry Card - overlaps hero bottom */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl shadow-2xl -mt-12 md:-mt-16 relative z-10 p-6 md:p-8 grid md:grid-cols-3 gap-6 items-center">
+          <div className="md:col-span-2">
+            <h3 className="text-lg md:text-xl font-bold text-gray-800">
+              Need something specific?
+            </h3>
+            <p className="text-sm text-gray-500 mt-1">
+              Message us your requirement — we'll check stock and get back
+              instantly.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/918825486940"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 hover:bg-green-700 text-white text-center px-6 py-3.5 rounded-xl font-semibold transition-colors"
+          >
+            Enquire on WhatsApp →
+          </a>
+        </div>
+      </div>
+
+      {/* Trust strip directly under hero — like "Partnering with global leaders" */}
+      <section className="bg-white py-8 border-b border-gray-100">
+        <p className="text-center text-xs md:text-sm text-gray-400 tracking-widest uppercase mb-6">
+          Genuine Products From
+        </p>
+        <BrandMarquee />
       </section>
 
       {/* Category Highlights */}
@@ -119,26 +184,30 @@ function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Why Choose Us
+          <div className="text-center mb-12">
+            <span className="text-red-500 text-xs font-semibold tracking-widest uppercase">
+              Why Sri Hari Electricals
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mt-2">
+              Built On Trust, Since 2016
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {trustPoints.map((point) => (
-              <div key={point.title} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-100 text-red-600 mb-3">
-                  <point.icon size={22} />
+              <div
+                key={point.title}
+                className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 text-center hover:border-red-500 transition-colors"
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-red-600 text-white mb-4">
+                  <point.icon size={24} />
                 </div>
-                <h3 className="font-semibold text-gray-800 text-sm md:text-base">
+                <h3 className="font-semibold text-white text-base">
                   {point.title}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-500 mt-1">
-                  {point.desc}
-                </p>
+                <p className="text-sm text-gray-400 mt-1.5">{point.desc}</p>
               </div>
             ))}
           </div>
@@ -146,22 +215,13 @@ function Home() {
       </section>
 
       {/* Brands Strip */}
-      <section className="py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-8">
+      <section className="py-14 bg-gray-50">
+        <div className="text-center mb-8">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800">
             Brands We Deal In
           </h2>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            {brands.map((brand) => (
-              <span
-                key={brand}
-                className="border border-gray-200 rounded-full px-5 py-2 text-sm md:text-base font-medium text-gray-700 hover:border-red-500 hover:text-red-600 transition-colors"
-              >
-                {brand}
-              </span>
-            ))}
-          </div>
         </div>
+        <BrandMarquee />
       </section>
 
       {/* CTA Banner */}
@@ -184,7 +244,7 @@ function Home() {
             >
               WhatsApp Us
             </a>
-            
+
             <a
               href="tel:+918825486940"
               className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-medium transition-colors"

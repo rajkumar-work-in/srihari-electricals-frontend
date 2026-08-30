@@ -13,9 +13,9 @@ function Products() {
       desc: "Switches, sockets, MCBs, and electrical accessories from trusted brands like Havells, Anchor, and Goldmedal.",
     },
     {
-      name: "Plumbing",
+      name: "Plumbing & Sanitary Ware",
       img: plumbingImg,
-      desc: "PVC pipes, fittings, taps, and plumbing accessories in various sizes for home and commercial use.",
+      desc: "PVC pipes, fittings, taps, and bathroom sanitary fixtures for new construction and renovations.",
     },
     {
       name: "Lights",
@@ -25,36 +25,32 @@ function Products() {
     {
       name: "Wires & Cables",
       img: wiresImg,
-      desc: "Flexible hoses, wire mesh, and electrical cables from Finolex and other trusted manufacturers.",
-    },
-    {
-      name: "Sanitary Ware",
-      img: plumbingImg,
-      desc: "Taps, fittings, and bathroom sanitary fixtures for new construction and renovations.",
-    },
-    {
-      name: "Cables",
-      img: wiresImg,
-      desc: "House wiring cables, extension cords, and industrial cabling solutions.",
+      desc: "Flexible hoses, wire mesh, house wiring cables, and industrial cabling from Finolex and other trusted manufacturers.",
     },
   ];
 
   const whatsappLink = (category) =>
     `https://wa.me/918825486940?text=${encodeURIComponent(
-      `Hi, I'm interested in ${category} products at Sri Hari Electricals`
+      `Hi, I'm interested in ${category} products at Sri Hari Electricals`,
     )}`;
 
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-gray-900 py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-24 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1631856954655-966f97d809de?auto=format&fit=crop&w=1600&q=80"
+          alt="Hardware store aisle"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white">
             Our Products
           </h1>
-          <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
-            From electricals to plumbing, we stock everything you need for
-            your home or project — all genuine, all reliable.
+          <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
+            From electricals to plumbing, we stock everything you need for your
+            home or project — all genuine, all reliable.
           </p>
         </div>
       </section>
@@ -78,9 +74,7 @@ function Products() {
                 <h3 className="font-semibold text-gray-800 text-lg mb-2">
                   {cat.name}
                 </h3>
-                <p className="text-sm text-gray-500 mb-4 flex-1">
-                  {cat.desc}
-                </p>
+                <p className="text-sm text-gray-500 mb-4 flex-1">{cat.desc}</p>
                 <a
                   href={whatsappLink(cat.name)}
                   target="_blank"
@@ -103,8 +97,8 @@ function Products() {
             Can't find what you're looking for?
           </h2>
           <p className="text-gray-500 mb-6">
-            We stock a lot more than what's shown here. Message us directly
-            and we'll help you find it.
+            We stock a lot more than what's shown here. Message us directly and
+            we'll help you find it.
           </p>
           <a
             href="https://wa.me/918825486940"
