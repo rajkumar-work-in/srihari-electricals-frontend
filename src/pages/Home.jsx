@@ -3,7 +3,7 @@ import { ShieldCheck, Zap, Wrench, Clock, Phone } from "lucide-react";
 import BrandMarquee from "../components/BrandMarquee";
 import HeroSlider from "../components/HeroSlider";
 
-import heroShopFront from "../assets/images/hero-shop-front-v3.jpg";
+import heroShopFront from "../assets/images/hero-shop-front-v3.png";
 import electricalsImg from "../assets/images/category-electricals.jpg";
 import plumbingImg from "../assets/images/category-plumbing.jpg";
 import lightsImg from "../assets/images/category-lights.jpg";
@@ -22,7 +22,7 @@ function Home() {
   ];
 
   const trustPoints = [
-    { icon: Clock, title: "Since 2016", desc: "9+ years serving Panruti" },
+    { icon: Clock, title: "Since 2016", desc: "9+ years serving Puthupet" },
     {
       icon: ShieldCheck,
       title: "Genuine Brands",
