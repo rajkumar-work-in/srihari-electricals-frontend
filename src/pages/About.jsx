@@ -1,26 +1,31 @@
 import { Link } from "react-router-dom";
 import { Clock, Users, ShieldCheck, MapPin } from "lucide-react";
-import aboutInteriorImg from "../assets/images/about-interior.jpg";
 
 function About() {
   const stats = [
     { icon: Clock, value: "9+", label: "Years in Business" },
     { icon: Users, value: "1000+", label: "Happy Customers" },
     { icon: ShieldCheck, value: "100%", label: "Genuine Products" },
-    { icon: MapPin, value: "1", label: "Trusted Location in Panruti" },
+    { icon: MapPin, value: "1", label: "Trusted Location in Puthupet" },
   ];
 
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-900 to-red-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-24 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1519520104014-df63821cb6f9?auto=format&fit=crop&w=1600&q=80"
+          alt="Wide range of hardware products"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white">
             About Us
           </h1>
           <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
-            Our story, our promise, and why the neighborhood has trusted us
-            since 2016.
+            Our story, our promise, and why the neighborhood has trusted us since 2016 — built on 
+            trust and quality.
           </p>
         </div>
       </section>
@@ -56,8 +61,8 @@ function About() {
 
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src={aboutInteriorImg}
-              alt="Inside Sri Hari Electricals"
+              src="https://images.unsplash.com/photo-1624927637280-f033784c1279?auto=format&fit=crop&w=1000&q=80"
+              alt="Organized hardware shelving"
               className="w-full h-[380px] object-cover"
             />
           </div>

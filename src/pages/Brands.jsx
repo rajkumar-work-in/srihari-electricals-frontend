@@ -29,7 +29,7 @@ function Brands() {
           </h1>
           <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
             We stock only genuine products from India's most trusted electrical
-            and hardware brands.
+            and hardware brands, for lasting quality.
           </p>
         </div>
       </section>
