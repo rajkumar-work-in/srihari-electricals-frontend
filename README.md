@@ -142,8 +142,7 @@ For inquiries about Sri Hari Electricals:
 
 ## 👨‍💻 Developer
 
-Built by **Rajkumar J** — Freelance Full Stack Developer specializing in responsive, business-focused websites for local enterprises.
----
+Built by ##Rajkumar J## — Freelance Full Stack Developer specializing in responsive, business-focused websites for local enterprises.
 
 ## 📝 License
 
