@@ -4,7 +4,7 @@ import BrandMarquee from "../components/BrandMarquee";
 import HeroSlider from "../components/HeroSlider";
 
 import heroShopFront from "../assets/images/hero-shop-front-v3.png";
-import electricalsImg from "../assets/images/category-electricals.jpg";
+import electricalsImg from "../assets/images/category-electricals.webp";
 import plumbingImg from "../assets/images/category-plumbing.jpg";
 import lightsImg from "../assets/images/category-lights.jpg";
 import wiresImg from "../assets/images/category-wires.jpg";
@@ -12,10 +12,7 @@ import wiresImg from "../assets/images/category-wires.jpg";
 function Home() {
   const categories = [
     {
-      name: "Electricals",
-      img: electricalsImg,
-      desc: "Switches, sockets & accessories",
-    },
+      name: "Electricals", img: electricalsImg, desc: "Switches, sockets & accessories"},
     { name: "Plumbing", img: plumbingImg, desc: "Pipes, taps & fittings" },
     { name: "Lights", img: lightsImg, desc: "LED bulbs & fixtures" },
     { name: "Wires & Cables", img: wiresImg, desc: "Hoses, wires & mesh" },

@@ -1,31 +1,56 @@
 import { MessageCircle } from "lucide-react";
 
-import electricalsImg from "../assets/images/category-electricals.jpg";
-import plumbingImg from "../assets/images/category-plumbing.jpg";
-import lightsImg from "../assets/images/category-lights.jpg";
-import wiresImg from "../assets/images/category-wires.jpg";
+import modularSwitchesImg from "../assets/images/modular-switches.jpg";
+import lightingDecorativeImg from "../assets/images/lighting-decorative.jpg";
+import pipeFittingsImg from "../assets/images/pipe-fittings.jpg";
+import wireCoilsImg from "../assets/images/wire-coils.jpg";
 
 function Products() {
-  const categories = [
+    const categories = [
     {
-      name: "Electricals",
-      img: electricalsImg,
-      desc: "Switches, sockets, MCBs, and electrical accessories from trusted brands like Havells, Anchor, and Goldmedal.",
+      name: "Modular Switches",
+      img: modularSwitchesImg,
+      desc: "Wide range of modular switches and accessories from Havells, Anchor, and Goldmedal.",
     },
     {
-      name: "Plumbing & Sanitary Ware",
-      img: plumbingImg,
-      desc: "PVC pipes, fittings, taps, and bathroom sanitary fixtures for new construction and renovations.",
+      name: "Decorative Lighting",
+      img: lightingDecorativeImg,
+      desc: "Stylish decorative lights and lamps to brighten every corner of your home.",
     },
     {
-      name: "Lights",
-      img: lightsImg,
-      desc: "LED bulbs, tube lights, and decorative lighting from Philips, Goldmedal, and other leading brands.",
+      name: "Plumbing Pipes & Fittings",
+      img: pipeFittingsImg,
+      desc: "Genuine Finolex PVC pipes, fittings, and solvent cement for reliable plumbing.",
     },
     {
       name: "Wires & Cables",
-      img: wiresImg,
-      desc: "Flexible hoses, wire mesh, house wiring cables, and industrial cabling from Finolex and other trusted manufacturers.",
+      img: wireCoilsImg,
+      desc: "House wiring cables and industrial wires in multiple colors and sizes.",
+    },
+    {
+      name: "Ceiling Fans",
+      img: "https://images.unsplash.com/photo-1609519479841-5fd3b2884e17?auto=format&fit=crop&w=800&q=80",
+      desc: "Energy-efficient ceiling and table fans from Crompton and Atomberg.",
+    },
+    {
+      name: "Hardware Tools & Accessories",
+      img: "https://images.unsplash.com/photo-1602052793312-b99c2a9ee797?auto=format&fit=crop&w=800&q=80",
+      desc: "Hand tools and accessories for every home and professional repair job.",
+    },
+    {
+      name: "Paints & Adhesives",
+      img: "https://images.unsplash.com/photo-1510016290251-68aaad49723e?auto=format&fit=crop&w=800&q=80",
+      desc: "Quality paints, primers, and adhesives for finishing and maintenance work.",
+    },
+    {
+      name: "General Hardware Supplies",
+      img: "https://images.unsplash.com/photo-1631856954913-c751a44490ec?auto=format&fit=crop&w=800&q=80",
+      desc: "Everyday hardware essentials to keep your home and workspace running smoothly.",
+    },
+    {
+      name: "Sanitary Ware & Fittings",
+      img: "https://images.unsplash.com/photo-1631856956423-2b95dae0ba74?auto=format&fit=crop&w=800&q=80",
+      desc: "Bathroom sanitary fixtures and fittings for new builds and renovations.",
     },
   ];
 
