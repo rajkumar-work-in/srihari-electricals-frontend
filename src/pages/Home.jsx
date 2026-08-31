@@ -126,14 +126,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Trust strip directly under hero — like "Partnering with global leaders" */}
-      <section className="bg-white py-8 border-b border-gray-100">
-        <p className="text-center text-xs md:text-sm text-gray-400 tracking-widest uppercase mb-6">
-          Genuine Products From
-        </p>
-        <BrandMarquee />
-      </section>
-
       {/* Category Highlights */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-10">
