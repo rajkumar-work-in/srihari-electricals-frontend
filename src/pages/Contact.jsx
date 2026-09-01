@@ -32,7 +32,7 @@ function Contact() {
   return (
     <div>
       {/* Page Header */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1567361808960-dec9cb578182?auto=format&fit=crop&w=1600&q=80"
           alt="Hardware tools"
