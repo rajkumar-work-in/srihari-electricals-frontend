@@ -51,7 +51,7 @@ function Home() {
         <HeroSlider
           images={[
             {
-              src: heroShopFront,
+              src: "https://images.unsplash.com/photo-1631856954655-966f97d809de?auto=format&fit=crop&w=1600&q=80",
               alt: "Sri Hari Electricals storefront signage",
             },
             {

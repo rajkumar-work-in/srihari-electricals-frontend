@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Clock, Users, ShieldCheck, MapPin } from "lucide-react";
 
+import heroShopFront from "../assets/images/hero-shop-front-v3.png";
+
 function About() {
   const stats = [
     { icon: Clock, value: "9+", label: "Years in Business" },
@@ -61,7 +63,7 @@ function About() {
 
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="https://images.unsplash.com/photo-1624927637280-f033784c1279?auto=format&fit=crop&w=1000&q=80"
+              src={heroShopFront}
               alt="Organized hardware shelving"
               className="w-full h-[380px] object-cover"
             />
