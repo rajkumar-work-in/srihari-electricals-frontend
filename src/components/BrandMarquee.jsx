@@ -10,8 +10,8 @@ function BrandMarquee() {
   return (
     <div className="relative overflow-hidden py-4">
       {/* Fade edges */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-linear-to-r from-white to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-linear-to-l from-white to-transparent z-10" />
 
       <div className="flex w-max animate-marquee">
         {loop.map((brand, i) => (

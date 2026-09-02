@@ -47,7 +47,7 @@ function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[520px] max-h-[720px] w-full overflow-hidden">
+      <section className="relative h-[85vh] min-h-130 max-h-180 w-full overflow-hidden">
         <HeroSlider
           images={[
             {
