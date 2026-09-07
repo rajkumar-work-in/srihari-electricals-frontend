@@ -25,7 +25,7 @@ function HeroSlider({ images, interval = 4500 }) {
 
       <div className="absolute inset-0 bg-black/75" />
 
-      {/* Dot  */}
+      {/* Dot indicators */}
       <div className="absolute top-6 right-6 flex gap-2 z-10">
         {images.map((_, i) => (
           <button
