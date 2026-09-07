@@ -15,7 +15,7 @@ function Brands() {
 
   return (
     <div>
-      {/* Page  */}
+      {/* Page Header */}
       <section className="relative py-24 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1624927637280-f033784c1279?auto=format&fit=crop&w=1600&q=80"
