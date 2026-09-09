@@ -4,7 +4,7 @@ function BrandMarquee() {
     "Philips", "Atomberg", "Anchor", "Crompton",
   ];
 
-  // Duplicate the list so the loop is 
+  // Duplicate the list so the loop is seamless
   const loop = [...brands, ...brands];
 
   return (
